@@ -1,9 +1,0 @@
-[submodule "Modules/ipwndfu-nowdt"]
-	path = Modules/ipwndfu-nowdt
-	url = https://github.com/cragy0516/ipwndfu-nowdt
-[submodule "Modules/openocd"]
-	path = Modules/openocd
-	url = https://github.com/lambdaconcept/openocd
-[submodule "Modules/bonobo-configs"]
-	path = Modules/bonobo-configs
-	url = https://github.com/lambdaconcept/bonobo-configs
