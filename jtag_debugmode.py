@@ -11,7 +11,8 @@ class JTAGDebugMode:
 		self.commands = [
 			['python', 'ipwndfu', '-p', '--demote', '--disable-wdt'],
 			['openocd', '-f', 'Modules/bonobo-configs/t8010.cfg'],
-			['ssh', '127.0.0.1'],
+			['nc', '127.0.0.1 4444'],
+			['gdb', '-q']
 		]
 		
 		print("Ready DFU Mode. we will wait 10 seconds..")
@@ -29,7 +30,6 @@ class JTAGDebugMode:
 		subprocess.run(['osascript', '-e', '''
     			tell application "Terminal"
         		activate
-        		do script "gdb -q" in front window
         		delay 1
         		do script "target remote :3333" in front window
         		delay 1
